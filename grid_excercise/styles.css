@@ -1,0 +1,94 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.my-first-grid {
+    display: grid;
+    /* grid-gap: 20px; */
+    background-color: #fbf6f6;
+    grid-template-areas: 
+        "top-left top-right"
+        "bottom-left bottom-right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    width: 1000px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+
+
+.my-first-grid > div {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+}
+
+.container {
+    height: 200px; /* Set the height as the height of your image */
+    line-height: 200px; 
+    text-align: center; /* Horizontally center the image */
+  }
+  
+  .container img { 
+    vertical-align: middle; /* Handle some alignment edge cases */
+  }
+
+.my-first-grid > div:nth-child(1) {
+    background-color: red;
+}
+
+.my-first-grid > div:nth-child(2) {
+    background-color: green;
+}
+
+.my-first-grid > div:nth-child(3) {
+    background-color: blue;
+}
+
+.my-first-grid > div:nth-child(4) {
+    background-color: yellow;
+    color: black;   
+}
+
+/* Responsive immage grid exceercise */
+
+img {
+    display :none; 
+}
+
+.my-first-grid  div:nth-child(1)  img {
+   display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    .my-first-grid div:nth-child(1) img {
+        display: none;
+    }
+
+    .my-first-grid div:nth-child(2) img {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .my-first-grid div:nth-child(2) img {
+        display: none;
+    }
+
+    .my-first-grid div:nth-child(3) img {
+        display: block;  
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .my-first-grid div:nth-child(4) img {
+        display: block;
+
+    }
+    .my-first-grid div:nth-child(3) img {
+        display: none;
+    }
+}
